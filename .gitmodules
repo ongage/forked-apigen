@@ -10,3 +10,6 @@
 [submodule "vendor/TokenReflection"]
 	path = vendor/TokenReflection
 	url = git://github.com/Andrewsville/PHP-Token-Reflection.git
+[submodule "vendor/Markdown"]
+	path = vendor/Markdown
+	url = git://github.com/michelf/php-markdown.git

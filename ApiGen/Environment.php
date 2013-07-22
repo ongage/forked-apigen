@@ -70,6 +70,7 @@ class Environment
 			// PEAR package
 			@include 'Nette/loader.php';
 			@include 'Texy/texy.php';
+			@include 'Markdown/Michelf/Markdown.php';
 		} elseif (static::isComposerPackage()) {
 			// Composer package
 
@@ -81,6 +82,7 @@ class Environment
 			set_include_path(
 				$vendorDir . '/kukulich/fshl' . PATH_SEPARATOR .
 				$vendorDir . '/andrewsville/php-token-reflection' . PATH_SEPARATOR .
+				$vendorDir . '/michelf/php-markdown' . PATH_SEPARATOR .
 				get_include_path()
 			);
 
@@ -95,6 +97,7 @@ class Environment
 			set_include_path(
 				$vendorDir . '/FSHL' . PATH_SEPARATOR .
 				$vendorDir . '/TokenReflection' . PATH_SEPARATOR .
+				$vendorDir . '/Markdown' . PATH_SEPARATOR .
 				get_include_path()
 			);
 		} else {
