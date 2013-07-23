@@ -124,8 +124,10 @@ class Template extends Nette\Templating\FileTemplate
 			switch ($name) {
 				case 'return':
 				case 'throws':
-					$description = $that->description($value, $context);
-					return sprintf('<code>%s</code>%s', $that->getTypeLinks($value, $context), $description ? '<br>' . $description : '');
+					// TODO: Needs fix - This produces duplicate throws statements
+//					$description = $that->description($value, $context);
+//					return sprintf('<code>%s</code>%s', $that->getTypeLinks($value, $context), $description ? '<br>' . $description : '');
+					return $that->getTypeLinks($value, $context);
 				case 'license':
 					list($url, $description) = $that->split($value);
 					return $that->link($url, $description ?: $url);
